@@ -22,7 +22,7 @@ const firebaseConfig = {
 // Initialize Firebase
 const firebaseApp = initializeApp(firebaseConfig)
 const auth = getAuth()
-console.log('AUTH', auth)
+// console.log('AUTH', auth)
 
 export async function logOut() {
   signOut(auth)

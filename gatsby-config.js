@@ -40,7 +40,7 @@ module.exports = {
   siteMetadata: {
     title: 'Tomate Azul',
     description: 'Com Amor.',
-    origin: 'http://tomateazul.barretolopes.com'
+    origin: 'https://tomateazul.barretolopes.com'
   },
   
   // this is for gh-pages deployment
