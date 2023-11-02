@@ -44,7 +44,7 @@ module.exports = {
   },
   
   // this is for gh-pages deployment
-  pathPrefix: "/ibpg-site"
+  pathPrefix: "/tomate-azul"
 }
 
 
