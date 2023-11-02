@@ -1,6 +1,5 @@
 import React, { Fragment, useState } from 'react'
 import CharmMenuHamburger from '../assets/CharmMenuHamburger'
-import logo from '../assets/logo.png'
 import * as styles from './navbar.module.css'
 import { Link } from 'gatsby'
 import { IconButton } from '@mui/material'
@@ -40,7 +39,7 @@ export default function Navbar() {
         {/* <h1 className={styles.title}>Tomate Azul</h1> */}
 
           <Link to='/'>
-            <img className={styles.logo} src={logo} alt='logo do Tomate Azul' />
+            <img className={styles.logo} src='/logo.png' alt='logo do Tomate Azul' />
           </Link>
       </nav>
     </Fragment>
