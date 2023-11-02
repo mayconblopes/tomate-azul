@@ -80,7 +80,7 @@ jobs:
           PREFIX_PATHS: 'true'
           GATSBY_API_URL: ${{secrets.GATSBY_API_URL}}
           GATSBY_ADM_PWD: ${{secrets.GATSBY_ADM_PWD}}
-          GATSBY_APP_SITE_KEY: ${{GATSBY_ADM_PWD}}
+          GATSBY_APP_SITE_KEY: ${{secrets.GATSBY_APP_SITE_KEY}}
         run: ${{ steps.detect-package-manager.outputs.manager }} run build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
