@@ -17,7 +17,7 @@ export default function Sobre({ data }: any) {
           marginBottom: '10px',
         }}
       >
-        SOBRE A IBPG
+        SOBRE O TOMATE AZUL
       </h1>
       <div style={{ marginLeft: '20px', marginRight: '20px' }}>
         <div

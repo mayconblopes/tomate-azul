@@ -29,7 +29,7 @@ export default function Navbar() {
           <Link to='/aniversariantes'>Aniversariantes</Link>
           <Link to='/documentos'>Documentos</Link>
           <Link to='/sobre'>Sobre</Link>
-          <img className={styles.logo} src={logo} alt='logo da IBPG' />
+          <img className={styles.logo} src={logo} alt='logo do Tomate Azul' />
         </div>
       </div> */}
 
@@ -40,7 +40,7 @@ export default function Navbar() {
         {/* <h1 className={styles.title}>Tomate Azul</h1> */}
 
           <Link to='/'>
-            <img className={styles.logo} src={logo} alt='logo da IBPG' />
+            <img className={styles.logo} src={logo} alt='logo do Tomate Azul' />
           </Link>
       </nav>
     </Fragment>
