@@ -138,11 +138,11 @@ export default function AdmPage() {
               fontSize: '14px'
             }}
               target='_blank'
-              href={`https://wa.me/55${pedidos[pedidoKey].telefone.replace(
+              href={`https://wa.me/55${pedidos[pedidoKey]?.telefone.replace(
                 /[^0-9]/g,
                 ''
               )}?text=Olá! Aqui é do Tomate Azul. Sobre o pedido "${
-                pedidos[pedidoKey].id
+                pedidos[pedidoKey]?.id
               }"`}
             >
               WHATSAPP
