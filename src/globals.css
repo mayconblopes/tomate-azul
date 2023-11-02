@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Montserrat:ital,wght@0,200;0,400;0,600;0,700;1,200;1,400;1,600;1,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    color: #272635;
+}
+
+html, body {
+    min-height: 100%;
+    min-height: -webkit-fill-available;
+}
+
+.beautifulText p, .beautifulText strong, .beautifulText em, .beautifulText a {
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+.beautifulText h1 {
+    font-size: 24px;
+}
+
+.beautifulText h2 {
+    font-size: 18px;
+}
+
+.beautifulText li, .beautifulText ul {
+    margin: 10px;
+    padding: 0;
+    font-size: 14px;
+}
+
+
+.beautifulWhiteText p, .beautifulWhiteText strong, .beautifulWhiteText em, .beautifulWhiteText a {
+    margin-bottom: 15px;
+    font-size: 16px;
+    color: antiquewhite;
+}
+
+.beautifulWhiteText h1 {
+    font-size: 24px;
+    color: antiquewhite;
+}
+
+.beautifulWhiteText h2 {
+    font-size: 18px;
+    color: antiquewhite;
+}
+
+.beautifulWhiteText li, .beautifulWhiteText ul {
+    color: antiquewhite;
+    margin: 10px;
+    padding: 0;
+    font-size: 14px;
+}
+
+
+.tomateModal {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 310px;
+        background: linear-gradient(135deg, #2AFADF 0%, #4C83FF 100%);
+        border: 2px solid #000;
+        box-shadow: 24;
+        padding: 4px;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        align-items: center;
+
+        
+}
+
+.tomateModalTitle {
+    font-size: 16px;
+    text-align: center;
+}
+
+.tomateModalTitle a {
+    background:  linear-gradient(135deg, #FEB692 0%, #EA5455 100%);
+    box-shadow: 3px 5px 10px black;
+    padding: 10px;
+    display: block;
+    margin: 5px 15%;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.tomateModalActions {
+        display: flex;
+        justify-content: space-evenly;
+        gap: 1px;
+}

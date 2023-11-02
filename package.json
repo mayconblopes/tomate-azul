@@ -1,0 +1,54 @@
+{
+  "name": "Igreja Batista em Parque Guarus",
+  "private": true,
+  "description": "Uma igreja que ama e que prega a verdade",
+  "version": "0.1.0",
+  "license": "0BSD",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "start": "gatsby develop",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean",
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
+    "deploy": "gatsby build --prefix-paths && gh-pages -d public"
+  },
+  "dependencies": {
+    "@mui/icons-material": "^5.14.3",
+    "@mui/material": "^5.14.5",
+    "@mui/system": "^5.14.5",
+    "dotenv": "^16.3.1",
+    "firebase": "^10.5.2",
+    "gatsby": "^5.11.0",
+    "gatsby-image": "^3.11.0",
+    "gatsby-plugin-graphql": "^2.0.5",
+    "gatsby-plugin-image": "^3.12.0",
+    "gatsby-plugin-netlify": "^5.1.0",
+    "gatsby-plugin-react-helmet": "^6.12.0",
+    "gatsby-plugin-sass": "^6.12.0",
+    "gatsby-plugin-sharp": "^5.12.0",
+    "gatsby-source-filesystem": "^5.12.0",
+    "gatsby-source-google-docs": "^2.4.2",
+    "gatsby-transformer-remark": "^6.12.0",
+    "gatsby-transformer-sharp": "^5.12.0",
+    "json-server": "^0.17.4",
+    "pantry-node": "^0.1.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-helmet": "^6.1.0",
+    "react-material-ui-carousel": "^3.4.2",
+    "showdown": "^2.1.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gatsbyjs/gatsby-starter-hello-world"
+  },
+  "bugs": {
+    "url": "https://github.com/gatsbyjs/gatsby/issues"
+  },
+  "devDependencies": {
+    "@types/react-helmet": "^6.1.6",
+    "@types/showdown": "^2.0.2",
+    "gh-pages": "^6.0.0"
+  }
+}

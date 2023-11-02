@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Give+You+Glory&display=swap');
+
+.indexContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.section {
+  margin-top: 20px;
+  width: calc(min(85%, 480px));
+}
+
+.specialFont1 {
+  font-family: 'Give You Glory', sans-serif;
+}
