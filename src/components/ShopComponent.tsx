@@ -4,6 +4,7 @@ import React, { Dispatch, SetStateAction, useEffect, useState } from 'react'
 import { IFoto } from '../pages'
 import { logOut, signIn, signInAnon } from '../utils/firebase'
 import ErrorMessage from './ErrorMessage'
+import ReCAPTCHA from "react-google-recaptcha";
 
 type ShopComponentProps = {
   selectedFotos: Array<IFoto>
@@ -24,7 +25,7 @@ export default function ShopComponent({
   const [open, setOpen] = useState(false)
   const [loading, setLoading] = useState<boolean>(false)
   const [errorMessage, setErrorMessage] = useState('')
-  const [user, setUser] = useState()
+  const [captcha, setCaptcha] = useState('')
 
   const apiURL = process.env.GATSBY_API_URL
 
@@ -196,6 +197,9 @@ export default function ShopComponent({
                 confirmar
               </p>
             )}
+
+        {captcha ? (
+
             <Button
               variant='contained'
               disabled={
@@ -206,6 +210,15 @@ export default function ShopComponent({
             >
               {loading ? 'AGUARDE' : shopButtonText}
             </Button>
+        ) : (
+           
+<ReCAPTCHA
+    sitekey={process.env.GATSBY_APP_SITE_KEY || 'não leu a variavel de ambiente'}
+    onChange={(token: string | null) => setCaptcha(token || '')}
+
+/>
+        )}
+
           </>
         ) : (
           <Modal open={shopConfirmation}>
