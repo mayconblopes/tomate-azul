@@ -79,9 +79,7 @@ jobs:
         env:
           PREFIX_PATHS: 'true'
           GATSBY_API_URL: ${{secrets.GATSBY_API_URL}}
-          GATSBY_PANTRY_API_URL: ${{secrets.GATSBY_PANTRY_API_URL}}
-          GATSBY_EXTENDSCLASS_API_URL: ${{secrets.GATSBY_EXTENDSCLASS_API_URL}}
-          GATSBY_EXTENDSCLASS_SECURITY_KEY: ${{secrets.GATSBY_EXTENDSCLASS_SECURITY_KEY}}
+          GATSBY_ADM_PWD: ${{secrets.GATSBY_ADM_PWD}}
         run: ${{ steps.detect-package-manager.outputs.manager }} run build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
