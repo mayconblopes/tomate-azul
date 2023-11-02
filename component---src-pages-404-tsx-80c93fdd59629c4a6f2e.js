@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkTomate_Azul=self.webpackChunkTomate_Azul||[]).push([[218],{2513:function(e,n,t){t.r(n),t.d(n,{default:function(){return a}});var u=t(7294);function a(){return u.createElement(u.Fragment,null,u.createElement("h2",null,"404 Not Found"),u.createElement("p",null,"Página não encontrada"))}}}]);
+//# sourceMappingURL=component---src-pages-404-tsx-80c93fdd59629c4a6f2e.js.map
