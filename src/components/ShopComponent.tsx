@@ -102,9 +102,14 @@ export default function ShopComponent({
             },
             body: JSON.stringify(pedido),
           })
-            .then(() => {
-              setShopConfirmation(true)
-              logOut()
+            .then((response) => {
+              if (response.ok){
+
+                setShopConfirmation(true)
+                logOut()
+              } else {
+                throw new Error("falha na escrita -> " + response.status)
+              }
             })
             .then(() => setLoading(false))
             .catch((error: any) => {
