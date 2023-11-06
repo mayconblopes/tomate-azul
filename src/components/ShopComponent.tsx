@@ -9,6 +9,7 @@ import ReCAPTCHA from "react-google-recaptcha";
 type ShopComponentProps = {
   selectedFotos: Array<IFoto>
   setFilter: (filter: string) => void
+  setCartZIndex: (index: '2' | '-2') => void
   setSelectedFotos: Dispatch<SetStateAction<IFoto[]>>
 }
 
@@ -16,6 +17,7 @@ export default function ShopComponent({
   selectedFotos,
   setFilter,
   setSelectedFotos,
+  setCartZIndex,
 }: ShopComponentProps) {
   const [nome, setNome] = useState('')
   const [telefone, setTelefone] = useState('')
@@ -29,17 +31,6 @@ export default function ShopComponent({
 
   const apiURL = process.env.GATSBY_API_URL
 
-  // useEffect(() => {
-  //   fetch(`${apiURL}/pedidos.json`).then(response => {
-  //     response
-  //       .json()
-  //       .then(data => {
-  //         // console.log('DATA AA-->', data)
-  //         setPedidos(data)
-  //       })
-  //       .then(() => console.log('PEDIDOS -> ', pedidos))
-  //   })
-  // }, [])
 
   useEffect(() => {
     setShopButtonText(
@@ -125,36 +116,6 @@ export default function ShopComponent({
           setLoading(false)
         })
 
-      // if (pwd) {
-      //   setLoading(true)
-      //   signIn('tomate@barretolopes.com', pwd)
-      //     .then((user: any) => {
-      //       fetch(`${apiURL}/pedidos.json?auth=${user.accessToken}`, {
-      //         method: 'POST',
-      //         headers: {
-      //           'Content-Type': 'application/json',
-      //         },
-      //         body: JSON.stringify(pedido),
-      //       })
-      //         .then(() => {
-      //           setShopConfirmation(true)
-      //           logOut()
-      //         })
-      //         .then(() => setLoading(false))
-      //         .catch((error: any) => {
-      //           console.log(error)
-      //           setErrorMessage(error.message)
-      //           setLoading(false)
-      //         })
-      //     })
-      //     .catch((error: any) => {
-      //       console.log(error)
-      //       setErrorMessage(error.message)
-      //       setLoading(false)
-      //     })
-      // } else {
-      //   console.log('Não foi possível obter a senha de administrador do .env')
-      // }
     }
   }
 
@@ -183,6 +144,8 @@ export default function ShopComponent({
               placeholder='Nome Completo'
               value={nome}
               onChange={handleTextEdit}
+              onFocus={() => setCartZIndex('-2')}
+              onBlur={() => setCartZIndex('2')}
             />
             <TextField
               id='telefone'
@@ -190,6 +153,8 @@ export default function ShopComponent({
               placeholder='(xx) xxxxx-xxxx'
               value={telefone}
               onChange={handleTextEdit}
+              onFocus={() => setCartZIndex('-2')}
+              onBlur={() => setCartZIndex('2')}
             />
             {shopButtonText === 'CONFIRMAR' && (
               <p style={{ width: '80%' }}>

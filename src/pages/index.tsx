@@ -44,6 +44,7 @@ export default function Fotos({ data }: any) {
   // console.log('firstFilteredFotos', filteredFotos)
   // console.log(fotos.filter((foto: any) => foto.relativePath.includes(filter)))
   const [knowMore, setKnowMore] = useState(false)
+  const [cartZIndex, setCartZIndex] = useState<'2' | '-2'>('2')
 
   useEffect(() => {
     // console.log('filter', filte)
@@ -258,7 +259,7 @@ export default function Fotos({ data }: any) {
         position='fixed'
         left='50%'
         top='93px'
-        zIndex='2'
+        zIndex={cartZIndex}
         padding='0 15px'
         boxSizing='border-box'
         sx={{
@@ -361,6 +362,7 @@ export default function Fotos({ data }: any) {
             selectedFotos={selectedFotos}
             setSelectedFotos={setSelectedFotos}
             setFilter={setFilter}
+            setCartZIndex={setCartZIndex}
           />
         </div>
       )}
