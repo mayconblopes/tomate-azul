@@ -15,3 +15,11 @@
 .specialFont1 {
   font-family: 'Give You Glory', sans-serif;
 }
+
+.almostAButton {
+  padding: 04px;
+  background-color: #1976d2;
+  cursor: pointer;
+  border-radius: 5px;
+  color: white;
+}

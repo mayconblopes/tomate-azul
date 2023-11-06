@@ -1,11 +1,21 @@
-import React, { Fragment, useEffect, useState } from 'react'
+import React, { FormEvent, Fragment, useEffect, useState } from 'react'
 import Layout from '../components/Layout'
 import { Link, graphql, navigate } from 'gatsby'
 import Img, { FluidObject } from 'gatsby-image'
 import { Modal } from '@mui/base'
-import { Button } from '@mui/material'
+import {
+  Button,
+  FormControl,
+  InputLabel,
+  MenuItem,
+  Select,
+  SelectChangeEvent,
+  Typography,
+} from '@mui/material'
 import ShopComponent from '../components/ShopComponent'
 import * as styles from './index.module.css'
+import { Box } from '@mui/system'
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart'
 
 export type IFoto = {
   relativePath: string
@@ -33,9 +43,10 @@ export default function Fotos({ data }: any) {
   const [selectedFotos, setSelectedFotos] = useState<IFoto[]>([])
   // console.log('firstFilteredFotos', filteredFotos)
   // console.log(fotos.filter((foto: any) => foto.relativePath.includes(filter)))
+  const [knowMore, setKnowMore] = useState(false)
 
   useEffect(() => {
-    // console.log('filter', filter)
+    // console.log('filter', filte)
 
     if (filter.toLocaleLowerCase() === 'selecionadas por você') {
       setFilteredFotos(selectedFotos)
@@ -46,14 +57,12 @@ export default function Fotos({ data }: any) {
     }
   }, [filter, selectedFotos])
 
-
-
   const modalStyle = {
     position: 'absolute' as 'absolute',
     top: '50%',
     left: '50%',
     transform: 'translate(-50%, -50%)',
-    width: 'calc(min(400px, 100vw))',
+    width: 'calc(min(600px, 95vw))',
     boxShadow: '24',
     zIndex: 2,
   }
@@ -68,8 +77,6 @@ export default function Fotos({ data }: any) {
       (foto: any) => foto.childrenImageSharp[0].fluid.base64 === img.base64
     )[0]
     const next = filteredFotos[filteredFotos.indexOf(actual) + 1]
-    // console.log(filteredFotos.indexOf(actual))
-    // console.log(filteredFotos.indexOf(next))
 
     if (filteredFotos.indexOf(next) >= 0) {
       setImg(next.childrenImageSharp[0].fluid)
@@ -89,28 +96,25 @@ export default function Fotos({ data }: any) {
     }
   }
 
-  function handleFilter(
-    event: React.MouseEvent<HTMLButtonElement, MouseEvent>
-  ) {
-    event.preventDefault()
-    // console.log((event.target as HTMLButtonElement).name)
-    setFilter((event.target as HTMLButtonElement).name)
+  function handleFilter(event: SelectChangeEvent) {
+    setFilter(event.target.value as string)
   }
 
   function handleSelect() {
-    // console.log('Total de fotos selecionadas---->', selectedFotos.length)
-
-    // console.log(actualFoto().relativePath)
+    // remove actual photo if it is already in selectedFotos
     if (selectedFotos.includes(actualFoto())) {
       setSelectedFotos(
         selectedFotos.filter(
           (foto: any) => foto.relativePath !== actualFoto().relativePath
         )
       )
+      // close the Modal if it is open in 'Selecionadas por você' filter
+      if (filter === 'Selecionadas por você') setOpen(false)
+
+      // add actual photo to selectedFotos
     } else {
       setSelectedFotos([...selectedFotos, actualFoto()])
     }
-    // console.log('Fotos Selecionadas', selectedFotos)
   }
 
   function actualFoto() {
@@ -131,7 +135,7 @@ export default function Fotos({ data }: any) {
               width: '100vw',
               top: '0',
               left: '0',
-              zIndex: 1,
+              zIndex: 2,
             }}
             onClick={() => setOpen(false)}
           ></div>
@@ -188,62 +192,132 @@ export default function Fotos({ data }: any) {
             <div
               style={{
                 display: 'flex',
-                justifyContent: 'space-around',
+                flexDirection: 'column',
                 alignItems: 'center',
                 backgroundColor: '#5856d3',
                 padding: '10px',
                 border: '1px solid black',
                 borderTop: 'none',
+                gap: '10px',
               }}
             >
-              <Button variant='contained' onClick={handlePrevImage}>
-                {'<'}
-              </Button>
-              <Button variant='contained' onClick={handleSelect}>
-                {selectedFotos.includes(actualFoto()) ? 'REMOVER' : 'QUERO!'}
-              </Button>
-              <Button variant='contained' onClick={handleNextImage}>
-                {'>'}
-              </Button>
+              <Typography color='white' textAlign='center'>
+                O produto final não contém as marcas d'água que você vê acima.{' '}
+                <a
+                  className={styles.almostAButton}
+                  onClick={() => setKnowMore(!knowMore)}
+                >
+                  {' '}
+                  {knowMore ? 'Menos' : 'Saiba mais'}
+                </a>
+              </Typography>
+
+              {knowMore && (
+                <Typography textAlign='center' color='#e9f000'>
+                  Inserimos marcas d'água nas artes do catálogo para impedir
+                  cópia não autorizada, mas os produtos finais são em alta
+                  resolução e sem as marcas d'água!
+                </Typography>
+              )}
+
+              <Box
+                sx={{
+                  display: 'flex',
+                  flexDirection: 'row',
+                  justifyContent: 'space-evenly',
+                  gap: '20px',
+                }}
+              >
+                <Button variant='contained' onClick={handlePrevImage}>
+                  {'<'}
+                </Button>
+                <Button
+                  variant='contained'
+                  color={
+                    selectedFotos.includes(actualFoto()) ? 'error' : 'success'
+                  }
+                  onClick={handleSelect}
+                >
+                  {selectedFotos.includes(actualFoto()) ? 'REMOVER' : 'QUERO!'}
+                </Button>
+                <Button variant='contained' onClick={handleNextImage}>
+                  {'>'}
+                </Button>
+              </Box>
             </div>
           </div>
         </>
       </Modal>
-      <h2 className={styles.specialFont1} style={{ textAlign: 'center', marginTop: '20px' }}>Nosso Catálogo</h2>
+
+      <Box
+        display='flex'
+        flexDirection='row'
+        justifyContent='space-between'
+        alignItems='center'
+        width='calc(min(600px, 100vw))'
+        position='fixed'
+        left='50%'
+        top='93px'
+        zIndex='2'
+        padding='0 15px'
+        boxSizing='border-box'
+        sx={{
+          // background: 'linear-gradient(135deg, #2AFADF 0%, #4C83FF 100%)',
+          background: 'linear-gradient(135deg, #FFF3B0 0%, #CA26FF 100%)',
+          boxShadow: '0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset',
+          transform: 'translate(-50%, -50%)',
+        }}
+      >
+        <i style={{ visibility: 'hidden' }}></i>
+        <h2
+          className={styles.specialFont1}
+          style={{ textAlign: 'center', marginTop: '8px' }}
+        >
+          Catálogo
+        </h2>
+        <Box display='flex'>
+          <ShoppingCartIcon
+            cursor='pointer'
+            onClick={() => setFilter('Selecionadas por você')}
+          />
+          <h4>{selectedFotos.length}</h4>
+        </Box>
+      </Box>
 
       <div
         style={{
           display: 'flex',
-          justifyContent: 'space-between',
+          justifyContent: 'space-around',
           flexWrap: 'wrap',
           alignItems: 'center',
           width: '80%',
           gap: '10px',
           margin: 'auto',
-          marginTop: '10px',
+          marginTop: '57px',
           marginBottom: '10px',
         }}
-      >
-        {directories.map((directory: any, index: number) => (
-          <Button
-            name={directory.name}
-            key={index}
-            // className={styles.specialFont2}
-            style={{
-              background:
-                filter === directory.name ? 'linear-gradient(135deg, #FEB692 0%, #EA5455 100%)' : 'linear-gradient(135deg, #2AFADF 0%, #4C83FF 100%)',
-              padding: '0 12px',
-              // borderRadius: '10px',
-              boxShadow: '0px 4px 4px 0px rgba(0, 0, 0, 0.25)',
-              color: 'black',
-              fontSize: '10px',
-            }}
-            onClick={event => handleFilter(event)}
+      ></div>
+
+      <Box sx={{ width: '90%', margin: '0 auto', mb: '15px' }}>
+        <FormControl fullWidth>
+          <InputLabel id='filter-select-label'>Filtro</InputLabel>
+
+          <Select
+            labelId='filter-select-label'
+            id='filer-select'
+            value={filter}
+            label='Filtro'
+            onChange={handleFilter}
           >
-            {directory.name.replace(/-/g, ' ')}
-          </Button>
-        ))}
-      </div>
+            {directories.map((directory: any, index: number) => (
+              <MenuItem value={directory.name} key={index}>
+                {directory.name.replace(/-/g, ' ')}
+              </MenuItem>
+            ))}
+          </Select>
+        </FormControl>
+      </Box>
+
       <div
         style={{
           display: 'flex',
@@ -255,10 +329,8 @@ export default function Fotos({ data }: any) {
           background: 'linear-gradient(135deg, #FFD3A5 0%, #FD6585 100%)',
           boxShadow: '0px 4px 4px 0px rgba(0, 0, 0, 0.25) ',
           width: '85%',
-          // height: 'calc(100% - 70px)',
           margin: 'auto',
           marginBottom: '20px',
-          // borderRadius: '10px',
           padding: '15px',
           overflow: 'scroll',
           boxSizing: 'border-box',
@@ -267,7 +339,7 @@ export default function Fotos({ data }: any) {
         {filteredFotos.map((foto, index) => (
           <div
             key={index}
-            style={{ width: '45%', cursor: 'pointer' }}
+            style={{ width: '90%', cursor: 'pointer' }}
             onClick={() => handleOpenModal(foto.childrenImageSharp[0].fluid)}
           >
             <Img
@@ -285,8 +357,11 @@ export default function Fotos({ data }: any) {
             marginBottom: '20px',
           }}
         >
-          <ShopComponent selectedFotos={selectedFotos} setSelectedFotos={setSelectedFotos} setFilter={setFilter}/>
-       
+          <ShopComponent
+            selectedFotos={selectedFotos}
+            setSelectedFotos={setSelectedFotos}
+            setFilter={setFilter}
+          />
         </div>
       )}
     </Layout>
