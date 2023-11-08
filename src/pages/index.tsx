@@ -276,6 +276,7 @@ export default function Fotos({ data }: any) {
         >
           Catálogo
         </h2>
+
         <Box display='flex'>
           <ShoppingCartIcon
             cursor='pointer'
@@ -294,30 +295,74 @@ export default function Fotos({ data }: any) {
           width: '80%',
           gap: '10px',
           margin: 'auto',
-          marginTop: '57px',
-          marginBottom: '10px',
+          marginTop: '47px',
+          
         }}
       ></div>
 
-      <Box sx={{ width: '90%', margin: '0 auto', mb: '15px' }}>
-        <FormControl fullWidth>
-          <InputLabel id='filter-select-label'>Filtro</InputLabel>
-
-          <Select
-            labelId='filter-select-label'
-            id='filer-select'
-            value={filter}
-            label='Filtro'
-            onChange={handleFilter}
+      <Box
+        
+        display='flex'
+        flexDirection='column'
+        justifyContent='center'
+        alignItems='center'
+        margin='0 auto'
+        
+        gap='15px'
+        sx={{ 
+          // background: 'blue'
+          // background: 'linear-gradient(135deg, #2AFADF 0%, #4C83FF 100%)'
+          // background: 'linear-gradient(135deg, #FFF3B0 0%, #CA26FF 100%)'
+        
+        padding: '15px' }}
+      >
+        <h3 className={styles.specialFont2} style={{ textAlign: 'center' }}>
+          {' '}
+          Olá! Que bom que você veio!
+        </h3>
+        <p className={styles.specialFont2}>
+          {' '}
+          Fale conosco pelo{' '}
+          <a
+            className={styles.almostAButton}
+            target='_blank'
+            href='https://wa.me/5522990626139'
           >
-            {directories.map((directory: any, index: number) => (
-              <MenuItem value={directory.name} key={index}>
-                {directory.name.replace(/-/g, ' ')}
-              </MenuItem>
-            ))}
-          </Select>
-        </FormControl>
+            WhatsApp
+          </a>
+        </p>
       </Box>
+
+      
+        
+        <Box sx={{ width: '90%', margin: '15px auto'}}>
+           <p className={styles.specialFont2} style={{ textAlign: 'right' }}>
+            Navegue utilizando o filtro:
+          </p>
+          <FormControl fullWidth>
+            <InputLabel id='filter-select-label'>Filtro</InputLabel>
+
+            <Select
+              labelId='filter-select-label'
+              id='filer-select'
+              value={filter}
+              label='Filtro'
+              onChange={handleFilter}
+            >
+              {directories.map((directory: any, index: number) => (
+                <MenuItem value={directory.name} key={index}>
+                  <p
+                    className={styles.specialFont1}
+                    style={{ fontWeight: 'bold' }}
+                  >
+                    {directory.name.replace(/-/g, ' ')}
+                  </p>
+                </MenuItem>
+              ))}
+            </Select>
+          </FormControl>
+        </Box>
+    
 
       <div
         style={{
@@ -366,6 +411,36 @@ export default function Fotos({ data }: any) {
           />
         </div>
       )}
+
+<Box
+        
+        display='flex'
+        flexDirection='column'
+        justifyContent='center'
+        alignItems='center'
+        margin='0 auto'
+        
+        gap='15px'
+        sx={{ 
+          // background: 'blue'
+          // background: 'linear-gradient(135deg, #2AFADF 0%, #4C83FF 100%)'
+          // background: 'linear-gradient(135deg, #FFF3B0 0%, #CA26FF 100%)'
+        
+        padding: '15px' }}
+      >
+     
+        <p className={styles.specialFont2}>
+          {' '}
+          Siga a gente no instagram{' '}
+          <a
+            className={styles.almostAButton}
+            target='_blank'
+            href='https://instagram.com/querotomateazul'
+          >
+            Instagram
+          </a>
+        </p>
+      </Box>
     </Layout>
   )
 }
