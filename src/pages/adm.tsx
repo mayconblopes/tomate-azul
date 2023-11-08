@@ -103,53 +103,54 @@ export default function AdmPage() {
   return (
     <>
       {errorMessage && <ErrorMessage errorMessage={errorMessage} />}
-      <Modal open={openModal}>
-        <Box className='tomateModal'>
-          <p className='tomateModalTitle'>
-            O pedido {pedidos[pedidoKey]?.id} será excluído para sempre. 
-          </p>
-          <p>
-          Você já salvou os dados do cliente?
-          </p>
-          <div className='tomateModalActions'>
-            <Button
-              variant='contained'
-              color='warning'
-              onClick={handleConcluirPedido}
-              size='small'
-            >
-              EXCLUIR
-            </Button>
-            <Button
-              variant='contained'
-              color='secondary'
-              onClick={() => setOpenModal(false)}
-              size='small'
-            >
-              CANCELAR
-            </Button>
-            <a
 
-            style={{
-              padding: '10px',
-              borderRadius: '5px',
-              background: 'green',
-              color: 'white',
-              fontSize: '14px'
-            }}
-              target='_blank'
-              href={`https://wa.me/55${pedidos[pedidoKey]?.telefone.replace(
-                /[^0-9]/g,
-                ''
-              )}?text=Olá! Aqui é do Tomate Azul. Sobre o pedido "${
-                pedidos[pedidoKey]?.id
-              }"`}
-            >
-              WHATSAPP
-            </a>
-          </div>
-        </Box>
-      </Modal>
+      {pedidos && (
+        <Modal open={openModal}>
+          <Box className='tomateModal'>
+            <p className='tomateModalTitle'>
+              O pedido {pedidos[pedidoKey]?.id} será excluído para sempre.
+            </p>
+            <p>Você já salvou os dados do cliente?</p>
+            <div className='tomateModalActions'>
+              <Button
+                variant='contained'
+                color='warning'
+                onClick={handleConcluirPedido}
+                size='small'
+              >
+                EXCLUIR
+              </Button>
+              <Button
+                variant='contained'
+                color='secondary'
+                onClick={() => setOpenModal(false)}
+                size='small'
+              >
+                CANCELAR
+              </Button>
+              <a
+                style={{
+                  padding: '10px',
+                  borderRadius: '5px',
+                  background: 'green',
+                  color: 'white',
+                  fontSize: '14px',
+                }}
+                target='_blank'
+                href={`https://wa.me/55${pedidos[pedidoKey]?.telefone.replace(
+                  /[^0-9]/g,
+                  ''
+                )}?text=Olá! Aqui é do Tomate Azul. Sobre o pedido "${
+                  pedidos[pedidoKey]?.id
+                }"`}
+              >
+                WHATSAPP
+              </a>
+            </div>
+          </Box>
+        </Modal>
+      )}
+
       <Layout>
         {!loggedIn ? (
           <Box
