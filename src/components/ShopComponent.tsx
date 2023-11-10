@@ -202,7 +202,7 @@ export default function ShopComponent({
                   Ou entre em contato conosco pelo{' '}
                   <a
                     target='_blank'
-                    href={`https://wa.me/5522990626139?text=Sobre o pedido de ${nome}`}
+                    href={`https://wa.me/5522996026139?text=Sobre o pedido de ${nome}`}
                   >
                     WhatsApp 22 99602-6139
                   </a>{' '}
