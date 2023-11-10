@@ -326,7 +326,7 @@ export default function Fotos({ data }: any) {
           <a
             className={styles.almostAButton}
             target='_blank'
-            href='https://wa.me/5522990626139'
+            href='https://wa.me/5522996026139'
           >
             WhatsApp
           </a>
