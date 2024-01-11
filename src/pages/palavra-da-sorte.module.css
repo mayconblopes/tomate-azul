@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+
+.box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 20% 10%;
+    padding: 50px 5px;
+    /* background: linear-gradient(135deg, rgb(42, 250, 223) 100%, rgb(76, 131, 255) 0%); */
+    box-shadow: black 3px 5px 10px;
+    border-radius: 5px;
+}
+
+.box p {
+    text-align: center;
+    font-family: 'Dancing Script', sans-serif;
+    font-size: 24px;
+    margin-bottom: 50px;
+}
+
+.box a {
+    cursor: pointer;
+    padding: 10px;
+    font-weight: bold;
+    background: linear-gradient(135deg, rgb(42, 250, 223) 0%, rgb(76, 131, 255) 100%);
+    border-radius: 5px;
+    
+}
