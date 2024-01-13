@@ -130,7 +130,7 @@ export default function Fotos({ data }: any) {
         <>
           <div
             style={{
-              backgroundColor: '#31137652',
+              backgroundColor: '#ffffff',
               position: 'absolute',
               height: '100vh',
               width: '100vw',
@@ -188,7 +188,23 @@ export default function Fotos({ data }: any) {
                 background: 'white',
               }}
             >
-              <Img fluid={img} />
+              <div
+                style={{
+                  position: 'relative',
+                }}
+              >
+                <img
+                  src="/marca d'agua - simple.png"
+                  alt=''
+                  style={{
+                    width: '100%',
+                    position: 'absolute',
+                    zIndex: '20',
+                  }}
+                />
+                <Img fluid={img} />
+              </div>
+              {/* <Img fluid={img} /> */}
             </div>
             <div
               style={{
@@ -377,10 +393,27 @@ export default function Fotos({ data }: any) {
             style={{ width: '90%', cursor: 'pointer' }}
             onClick={() => handleOpenModal(foto.childrenImageSharp[0].fluid)}
           >
-            <Img
-              fluid={foto.childrenImageSharp[0].fluid}
-              imgStyle={{ maxHeight: '200px' }}
-            />
+            <div
+              style={{
+                position: 'relative',
+                backgroundColor: 'white'
+              }}
+            >
+              <img
+                src="/marca d'agua - simple.png"
+                alt=''
+                style={{
+                  width: '100%',
+                  position: 'absolute',
+                  zIndex: '1',
+                  // visibility: open ? 'hidden' : 'visible'
+                }}
+              />
+              <Img
+                fluid={foto.childrenImageSharp[0].fluid}
+                imgStyle={{ maxHeight: '200px' }}
+              />
+            </div>
           </div>
         ))}
       </div>
@@ -438,20 +471,19 @@ export default function Fotos({ data }: any) {
           >
             WhatsApp
           </a>
-
-        <div style={{position: 'relative'}}>
-          <img
-            src='avatar_piscadela.png'
-            alt='Avatar do Tomate Azul piscando simpaticamente'
-            style={{
-              width: '45px',
-              position: 'absolute',
-              bottom: '50%',
-              right: '-50px'
-            }}
+          <div style={{ position: 'relative' }}>
+            <img
+              src='avatar_piscadela.png'
+              alt='Avatar do Tomate Azul piscando simpaticamente'
+              style={{
+                width: '45px',
+                position: 'absolute',
+                bottom: '50%',
+                right: '-50px',
+              }}
             />
-        </div>
-            </p>
+          </div>
+        </p>
       </Box>
     </Layout>
   )
