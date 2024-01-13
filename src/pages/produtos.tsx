@@ -1,16 +1,42 @@
 import React from 'react'
 import Layout from '../components/Layout'
 
-import * as styles from './index.module.css'
 import { Box } from '@mui/system'
+import TouchAppIcon from '@mui/icons-material/TouchApp'
+import * as styles from './index.module.css'
+import * as animationStyles from './produtos.module.css'
 
 export default function Produtos() {
   return (
     <Layout>
+      <div className={animationStyles.slideOutBlurredTop}
+      
+          style={{
+            color: 'black',
+            position: 'absolute',
+            margin: '0 auto',
+            left: '70%',
+            top: '55%',
+            zIndex: '10',
+          }}
+      >
+        <div
+          className={animationStyles.slideBckLeft}
+        >
+          <TouchAppIcon
+            sx={{
+              color: 'blue',
+              fontSize: '50px',
+              opacity: '70%',
+            }}
+          />
+        </div>
+      </div>
+
       <Box
-      position='absolute'
-      zIndex='5'
-      top='70px'
+        position='absolute'
+        zIndex='5'
+        top='70px'
         display='flex'
         flexDirection='column'
         justifyContent='center'
@@ -20,7 +46,7 @@ export default function Produtos() {
         width='calc(min(100%,600px))'
         boxSizing='border-box'
         sx={{
-        //   background: 'white',
+          //   background: 'white',
           background: 'linear-gradient(135deg, #2AFADF 0%, #4C83FF 100%)',
           // background: 'linear-gradient(135deg, #FFF3B0 0%, #CA26FF 100%)',
 
