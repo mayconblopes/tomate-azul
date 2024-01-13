@@ -274,7 +274,7 @@ export default function Fotos({ data }: any) {
           className={styles.specialFont1}
           style={{ textAlign: 'center', marginTop: '8px' }}
         >
-          Catálogo
+          Catálogo de Artes
         </h2>
 
         <Box display='flex'>
@@ -296,73 +296,62 @@ export default function Fotos({ data }: any) {
           gap: '10px',
           margin: 'auto',
           marginTop: '47px',
-          
         }}
       ></div>
 
       <Box
-        
         display='flex'
         flexDirection='column'
         justifyContent='center'
         alignItems='center'
         margin='0 auto'
-        
         gap='15px'
-        sx={{ 
+        sx={{
           // background: 'blue'
           // background: 'linear-gradient(135deg, #2AFADF 0%, #4C83FF 100%)'
           // background: 'linear-gradient(135deg, #FFF3B0 0%, #CA26FF 100%)'
-        
-        padding: '15px' }}
+
+          padding: '15px',
+        }}
       >
         <h3 className={styles.specialFont2} style={{ textAlign: 'center' }}>
-          {' '}
-          Olá! Que bom que você veio!
+          Oi! Este é nosso catálogo de artes.
         </h3>
         <p className={styles.specialFont2}>
-          {' '}
-          Fale conosco pelo{' '}
-          <a
-            className={styles.almostAButton}
-            target='_blank'
-            href='https://wa.me/5522996026139'
-          >
-            WhatsApp
+          Veja também o catálogo de{' '}
+          <a className={styles.almostAButton} target='_blank' href='/produtos'>
+            Produtos
           </a>
         </p>
       </Box>
 
-      
-        
-        <Box sx={{ width: '90%', margin: '15px auto'}}>
-           <p className={styles.specialFont2} style={{ textAlign: 'right' }}>
-            Navegue utilizando o filtro:
-          </p>
-          <FormControl fullWidth>
-            <InputLabel id='filter-select-label'>Filtro</InputLabel>
+      <Box sx={{ width: '90%', margin: '15px auto' }}>
+        <p className={styles.specialFont2} style={{ textAlign: 'right' }}>
+          Navegue utilizando o filtro:
+        </p>
+        <FormControl fullWidth>
+          <InputLabel id='filter-select-label'>Filtro</InputLabel>
 
-            <Select
-              labelId='filter-select-label'
-              id='filer-select'
-              value={filter}
-              label='Filtro'
-              onChange={handleFilter}
-            >
-              {directories.map((directory: any, index: number) => (
-                <MenuItem value={directory.name} key={index}>
-                  <p
-                    className={styles.specialFont1}
-                    style={{ fontWeight: 'bold' }}
-                  >
-                    {directory.name.replace(/-/g, ' ')}
-                  </p>
-                </MenuItem>
-              ))}
-            </Select>
-          </FormControl>
-        </Box>
-    
+          <Select
+            labelId='filter-select-label'
+            id='filer-select'
+            value={filter}
+            label='Filtro'
+            onChange={handleFilter}
+          >
+            {directories.map((directory: any, index: number) => (
+              <MenuItem value={directory.name} key={index}>
+                <p
+                  className={styles.specialFont1}
+                  style={{ fontWeight: 'bold' }}
+                >
+                  {directory.name.replace(/-/g, ' ')}
+                </p>
+              </MenuItem>
+            ))}
+          </Select>
+        </FormControl>
+      </Box>
 
       <div
         style={{
@@ -412,26 +401,24 @@ export default function Fotos({ data }: any) {
         </div>
       )}
 
-<Box
-        
+      <Box
         display='flex'
         flexDirection='column'
         justifyContent='center'
         alignItems='center'
         margin='0 auto'
-        
         gap='15px'
-        sx={{ 
+        sx={{
           // background: 'blue'
           // background: 'linear-gradient(135deg, #2AFADF 0%, #4C83FF 100%)'
           // background: 'linear-gradient(135deg, #FFF3B0 0%, #CA26FF 100%)'
-        
-        padding: '15px' }}
+
+          padding: '15px',
+        }}
       >
-     
         <p className={styles.specialFont2}>
           {' '}
-          Siga a gente no instagram{' '}
+          Siga a gente no{' '}
           <a
             className={styles.almostAButton}
             target='_blank'
@@ -440,6 +427,31 @@ export default function Fotos({ data }: any) {
             Instagram
           </a>
         </p>
+
+        <p className={styles.specialFont2}>
+          {' '}
+          Fale com a gente no{' '}
+          <a
+            className={styles.almostAButton}
+            target='_blank'
+            href='https://wa.me/5522996026139'
+          >
+            WhatsApp
+          </a>
+
+        <div style={{position: 'relative'}}>
+          <img
+            src='avatar_piscadela.png'
+            alt='Avatar do Tomate Azul piscando simpaticamente'
+            style={{
+              width: '45px',
+              position: 'absolute',
+              bottom: '50%',
+              right: '-50px'
+            }}
+            />
+        </div>
+            </p>
       </Box>
     </Layout>
   )
