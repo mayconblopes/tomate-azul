@@ -10,8 +10,8 @@
 }
 
 .slideOutBlurredTop {
-	-webkit-animation: slideOutBlurredTop 0.45s cubic-bezier(0.755, 0.050, 0.855, 0.060) 6s both;
-	        animation: slideOutBlurredTop 0.45s cubic-bezier(0.755, 0.050, 0.855, 0.060) 6s both;
+	-webkit-animation: slideOutBlurredTop 0.45s cubic-bezier(0.755, 0.050, 0.855, 0.060) 10s both;
+	        animation: slideOutBlurredTop 0.45s cubic-bezier(0.755, 0.050, 0.855, 0.060) 10s both;
 }
 
 /* ----------------------------------------------

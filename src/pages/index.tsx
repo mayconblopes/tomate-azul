@@ -333,7 +333,7 @@ export default function Fotos({ data }: any) {
         <h3 className={styles.specialFont2} style={{ textAlign: 'center' }}>
           Oi! Este é nosso catálogo de artes.
         </h3>
-        <p className={styles.specialFont2}>
+        <p className={styles.specialFont2 + ' ' + styles.heartbeat}>
           Veja também o catálogo de{' '}
           <a className={styles.almostAButton} target='_blank' href='/produtos'>
             Produtos
