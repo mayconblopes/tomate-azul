@@ -3,27 +3,47 @@ type: 'palavra-da-sorte'
 'updated': '2024-01-11'
 ---
 
-O temor do Senhor é o princípio do conhecimento; os loucos desprezam a sabedoria e a instrução.
+O cavalo prepara-se para o dia da batalha, porém do Senhor vem a vitória. Provérbios 21:31
 
-Filho meu, ouve a instrução de teu pai, e não deixes o ensinamento de tua mãe, porque serão como diadema gracioso em tua cabeça, e colares ao teu pescoço.
+A soberba precede a ruína, e a altivez do espírito precede a queda. Provérbios 16:18
 
-Filho meu, se os pecadores procuram te atrair com agrados, não aceites.
+Uns se dizem ricos não tendo nada; Outros se dizem pobres tendo grandes riquezas. Provérbios 13:7
 
-Se disserem: Vem conosco a tocaias de sangue; embosquemos o inocente sem motivo; Traguemo-los vivos, como a sepultura; e inteiros, como os que descem à cova; Acharemos toda sorte de bens preciosos; encheremos as nossas casas de despojos; Lança a tua sorte conosco; teremos todos uma só bolsa! Filho meu, não te ponhas a caminho com eles; desvia o teu pé das suas veredas; Porque os seus pés correm para o mal, e se apressam a derramar sangue. Na verdade é inútil estender-se a rede ante os olhos de qualquer ave. No entanto estes armam ciladas contra o seu próprio sangue; e espreitam suas próprias vidas.
+Se te mostrares fraco no dia da angústia, é que a tua força é pequena. Provérbios 24:10
 
-São assim as veredas de todo aquele que usa de cobiça: ela põe a perder a alma dos que a possuem.
+Acima de tudo, guarde o seu coração, pois dele depende toda a sua vida. Provérbios 4:23
 
-A sabedoria clama lá fora; pelas ruas levanta a sua voz. Nas esquinas movimentadas ela brada; nas entradas das portas e nas cidades profere as suas palavras:
+O filho sábio dá alegria a seu pai, mas o tolo despreza a sua mãe.
 
-Atentai para a minha repreensão; pois eis que vos derramarei abundantemente do meu espírito e vos farei saber as minhas palavras.
+Assim como a água reflete o rosto, o coração reflete quem somos nós. Provérbios 27:19
 
-O que me der ouvidos habitará em segurança, e estará livre do temor do mal, diz o Senhor. 
+A bênção do Senhor é que enriquece; e não traz consigo dores. Provérbios 10:22
 
-Filho meu, se aceitares as minhas palavras, e esconderes contigo os meus mandamentos, para fazeres o teu ouvido atento à sabedoria; e inclinares o teu coração ao entendimento; se clamares por conhecimento, e por inteligência alçares a tua voz, se como a prata a buscares e como a tesouros escondidos a procurares, então entenderás o temor do Senhor, e acharás o conhecimento de Deus. 
+A sabedoria do homem lhe dá paciência; sua glória é ignorar as ofensas. Provérbios 19:11
 
-Porque o Senhor dá a sabedoria; da sua boca é que vem o conhecimento e o entendimento. Ele reserva a verdadeira sabedoria para os retos. Escudo é para os que caminham na sinceridade, para que guardem as veredas do juízo. Ele preservará o caminho dos seus santos.
+Guarda o teu coração, porque dele procedem as saídas da vida. Provérbios 4:23
 
-Pois quando a sabedoria entrar no teu coração, e o conhecimento for agradável à tua alma, o bom siso te guardará e a inteligência te conservará; para te afastar do mau caminho, e do homem que fala coisas perversas; dos que deixam as veredas da retidão, para andarem pelos caminhos escusos; que se alegram de fazer mal, e folgam com as perversidades dos maus, cujas veredas são tortuosas e que se desviam nos seus caminhos; para te afastar da mulher estranha, sim da estranha que lisonjeia com suas palavras; que deixa o guia da sua mocidade e se esquece da aliança do seu Deus; porque a sua casa se inclina para a morte, e as suas veredas para os mortos.
+Os sábios herdarão honra, mas os loucos tomam sobre si vergonha. Provérbios 3:35
 
-Porque os retos habitarão a terra, e os íntegros permanecerão nela. Mas os ímpios serão arrancados da terra, e os aleivosos serão dela exterminados. 
+Não sejas sábio a teus próprios olhos; teme ao Senhor e aparta-te do mal. Provérbios 3:7
+
+Desvia de ti a falsidade da boca, e afasta de ti a perversidade dos lábios. Provérbios 4:24
+
+Olhe sempre para frente; mantenha os olhos fixos no que está diante de você. Estabeleça um caminho reto para seus pés; permaneça na estrada segura. Não se desvie nem para a direita nem para a esquerda; não permita que seus pés sigam o mal. ⁠Provérbios 4.25-27
+
+Clame por inteligência e peça entendimento. Pois o Senhor concede sabedoria; de sua boca vêm conhecimento e entendimento. ⁠Provérbios 2.3,6
+
+O crisol é para a prata e o forno é para o ouro, mas o Senhor prova o coração. Provérbios 17:3
+
+⁠Mulher virtuosa, quem a achará? O seu valor muito excede o de rubis. Provérbios 31:10
+
+O ódio excita contendas, mas o amor cobre todos os pecados. Provérbios 10:12
+
+De que serve o dinheiro na mão do tolo, já que ele não quer obter sabedoria? Provérbios 17:16
+
+O temor do Senhor é o princípio do conhecimento, mas os tolos desprezam a sabedoria e a disciplina. ⁠Provérbios 1.7
+
+Confie no Senhor de todo o coração; não dependa de seu próprio entendimento. Busque a vontade dele em tudo que fizer, e ele lhe mostrará o caminho que deve seguir. ⁠Provérbios 3.5-6
+
+Não deixe de fazer o bem àqueles que precisarem, sempre que isso estiver ao seu alcance. Se você pode ajudar seu próximo agora, não lhe diga: “Volte amanhã, e lhe darei algo”. ⁠Provérbios 3.27-28
 
