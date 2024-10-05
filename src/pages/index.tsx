@@ -36,7 +36,7 @@ export default function Fotos({ data }: any) {
 
   const [open, setOpen] = useState(false)
   const [img, setImg] = useState({} as FluidObject)
-  const [filter, setFilter] = useState('Dia dos Pais')
+  const [filter, setFilter] = useState('Dia do Professor')
   const [filteredFotos, setFilteredFotos] = useState(
     fotos.filter((foto: any) => foto.relativePath.includes(filter))
   )
